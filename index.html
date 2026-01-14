@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <title>Jsnake</title>
+    </head>
+
+    <body onload="gameStart()" class="flex flex-col items-center justify-center w-full h-screen bg-slate-200">
+        <div class="bg-[#578A34] w-[600px] h-[600px] flex flex-col rounded-xl overflow-hidden">
+            <div class="w-full h-[54px] bg-[#4A752C] flex flex-row items-center justify-between px-4">
+
+                <div class="flex flex-row gap-8">
+                    <div class="flex flex-row items-center justify-center gap-2 h-full">
+                        <div class="w-[32px] h-[32px] bg-red-500 rounded-full"></div>
+                        <p class="text-white text-[24px]" id="score">: 0</p>
+                    </div>
+
+                    <div class="flex flex-row items-center justify-center gap-2 h-full">
+                        <p class="text-white text-[24px]" id="highscore">Highscore: 0</p>
+                    </div>
+                </div>
+
+                <p class="text-[24px] font-bold text-white">JSnake</p>
+            </div>
+
+            <div class="w-full flex-1 flex items-center justify-center">
+                <canvas id="_canvas">
+                </canvas>
+            </div>
+        </div>
+
+        <div class="bg-[#4A752C] p-4 rounded-xl mt-4">
+            <div class="flex flex-col gap-2 bg-[#A2D049A0] rounded-md px-2 text-white font-bold">
+                <p>w,a,s,d: move</p>
+                <p>(arrow) up,left,down,right: move</p>
+                <p>r: restart</p>
+            </div>
+        </div>
+
+        <script defer src="./index.js"></script>
+    </body>
+</html>
